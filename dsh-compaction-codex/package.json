@@ -1,0 +1,24 @@
+{
+  "name": "@dsh-external/dsh-compaction-codex",
+  "version": "0.0.1",
+  "description": "Codex 式换窗压缩引擎：继承官方 BasicCompactionEngine，覆写 summarize() 为纯确定性指针模板（零 LLM 调用）——归档指针 + notes 检查点 + 首尾锚点 + 检索指引，替换预设 compaction 组中的 @deepseek-ai/dsh-compaction-basic",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": ["lib"],
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0",
+    "@deepseek-ai/dsh-compaction-basic": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

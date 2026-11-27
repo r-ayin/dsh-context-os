@@ -1,0 +1,25 @@
+{
+  "name": "@dsh-external/dsh-context-budget-realm",
+  "version": "0.0.1",
+  "description": "dsh-context-budget realm 侧换窗执行器：挂进 preset compaction 组，inject compaction（声明式等待，command-compact 同款路径），消费换窗标志文件并调用引擎，结果落 notes",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
